@@ -5,6 +5,19 @@ class LocationFinder:
         self.lat = None
         self.lon = None
 
+    def get_lat(self):
+        return self.lat
+
+    def get_lon(self):
+        return self.lon
+
+    def set_lat(self, lat):
+        self.lat = lat
+
+    def set_lon(self, lon):
+        self.lon = lon
+
+    def cli_locator(self):
         while True:
             method = input(
                 'Choose method for determining location: (1) System location or (2) Enter a latitude and longitude. -> ')
@@ -20,18 +33,7 @@ class LocationFinder:
         coords = locator.get_latlon()
         self.set_lat(coords['lat'])
         self.set_lon(coords['lon'])
-
-    def get_lat(self):
-        return self.lat
-
-    def get_lon(self):
-        return self.lon
-
-    def set_lat(self, lat):
-        self.lat = lat
-
-    def set_lon(self, lon):
-        self.lon = lon
+        print('Location is set to (%s, %s)' % (coords['lat'], coords['lon']))
 
 class SystemLocation:
     def __init__(self):
