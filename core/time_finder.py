@@ -22,7 +22,7 @@ class TimeFinder:
                 break
             else:
                 print('Invalid choice. Enter a number from the listed options.')
-        self.set_time(finder.get_time())
+        self.set_time(finder.obtain_time())
         print(f'Time (in UTC) is set to {self.time}.')
 
 class SystemTime:
@@ -30,7 +30,7 @@ class SystemTime:
         pass
 
     @staticmethod
-    def get_time():
+    def obtain_time():
          return datetime.now(UTC)
 
 class ManualTime:
@@ -38,7 +38,7 @@ class ManualTime:
         pass
 
     @staticmethod
-    def get_time():
+    def obtain_time():
         print('All dates and time should be entered in UTC.')
         while True:
             selected_date_str = input('Enter date in format "YYYY-MM-DD". -> ')

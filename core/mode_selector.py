@@ -22,10 +22,10 @@ class ModeSelector:
         while True:
             choice = input("Choose a function: (1) Object Finder, (2) What's Up There -> ")
             if choice == "1":
-                finder = ObjectFinder(self.available_data)
+                finder = ObjectFinderMode(self.available_data)
                 break
             elif choice == "2":
-                finder = RightNow(self.available_data)
+                finder = RightNowMode(self.available_data)
                 break
             else:
                 print('Invalid choice. Please select from the numbers listed.')
@@ -33,7 +33,7 @@ class ModeSelector:
         self.set_mode(finder.mode)
         self.set_target(finder.target)
 
-class ObjectFinder(ModeSelector):
+class ObjectFinderMode(ModeSelector):
     def __init__(self, available_data: pd.DataFrame):
         super().__init__(available_data)
         self.object_list = self.available_data['name'].to_list()
@@ -53,7 +53,7 @@ class ObjectFinder(ModeSelector):
         self.set_mode('objectfinder')
         self.set_target(self._obtain_target())
 
-class RightNow(ModeSelector):
+class RightNowMode(ModeSelector):
     def __init__(self, available_data: pd.DataFrame):
         super().__init__(available_data)
 
