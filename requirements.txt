@@ -3,8 +3,8 @@ argon2-cffi==23.1.0
 argon2-cffi-bindings==21.2.0
 arrow==1.3.0
 astroplan @ git+https://github.com/astropy/astroplan@fe4a7402a8238e702c470831520a027b9d12913d
-astropy==7.0.0rc1
-astropy-iers-data==0.2024.11.18.0.35.2
+astropy==7.0.1
+astropy-iers-data==0.2025.1.31.12.41.4
 asttokens==2.4.1
 async-lru==2.0.4
 attrs==24.2.0
@@ -71,8 +71,6 @@ Pygments==2.18.0
 python-dateutil==2.9.0.post0
 python-json-logger==2.0.7
 pytz==2024.2
-pywin32==308
-pywinpty==2.0.14
 PyYAML==6.0.2
 pyzmq==26.2.0
 referencing==0.35.1
